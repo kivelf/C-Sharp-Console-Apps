@@ -8,7 +8,7 @@ namespace L03Opg2
 {
     public class Medarbejder
     {
-        private string cpr;
+        private CprNr cpr;
         private string name;
         private string adresse;
         private string medarbejdernummer;
@@ -32,13 +32,21 @@ namespace L03Opg2
 
         public Medarbejder(string name)
         {
-            this.cpr = "unknown";
+            this.cpr = null;
             this.name = name;
             this.adresse = "default";
             this.medarbejdernummer = "not available";
         }
 
-        public string CprNr
+        public Medarbejder(string name, string address)
+        {
+            this.cpr = null;
+            this.name = name;
+            this.adresse = address;
+            this.medarbejdernummer = "not available";
+        }
+
+        public CprNr CprNr
         {
             get { return this.cpr; }
             set { this.cpr = value; }
@@ -72,7 +80,7 @@ namespace L03Opg2
 
         public override string ToString()
         {
-            return $"Medarbejder {Name}, cpr: {CprNr}, nummer: {Medarbejdernummer}";
+            return $"Medarbejder {Name}, cpr: {CprNr.ToString()}, nummer: {Medarbejdernummer}";
         }
     }
 }

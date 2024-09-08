@@ -11,7 +11,13 @@ namespace L03Opg2
         private int aarstal;
         private double timeloen;
 
-        public Mekaniker(string cpr, string nummer, int aarstal, double timeloen, string name): base(cpr, name, nummer) 
+        public Mekaniker(CprNr cpr, string nummer, int aarstal, double timeloen, string name): base(cpr, name, nummer) 
+        {
+            this.aarstal = aarstal;
+            this.timeloen = timeloen;
+        }
+
+        public Mekaniker(int aarstal, double timeloen, string name) : base(name)
         {
             this.aarstal = aarstal;
             this.timeloen = timeloen;

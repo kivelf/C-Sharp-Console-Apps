@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace L03Opg2
 {
@@ -22,10 +23,9 @@ namespace L03Opg2
             set { this.birthDate = value; }
         }
 
-        public string CprNr
+        public override string ToString()
         {
-            get { return this.birthDate + "-" + this.sequenceNumber; }
-            set { this.sequenceNumber = value; }
+            return this.birthDate + "-" + this.sequenceNumber;
         }
     }
 }
