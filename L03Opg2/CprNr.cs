@@ -16,8 +16,16 @@ namespace L03Opg2
             sequenceNumber = sNr;
         }
 
-        public string BirthDate {  get birthDate; }
+        public string BirthDate
+        {
+            get { return this.birthDate; }
+            set { this.birthDate = value; }
+        }
 
-        public string Cpr { return BirthDate;  }
+        public string CprNr
+        {
+            get { return this.birthDate + "-" + this.sequenceNumber; }
+            set { this.sequenceNumber = value; }
+        }
     }
 }

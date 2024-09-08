@@ -11,7 +11,8 @@ namespace L03Opg2
         static void Main(string[] args)
         {
             List<Medarbejder> medarbejdere = new List<Medarbejder>();
-            medarbejdere.Add(new Medarbejder("Lene"));
+            CprNr cpr1 = new CprNr("010190", "1122");
+            medarbejdere.Add(new Medarbejder(cpr1, "Lene", "100"));
             medarbejdere.Add(new Mekaniker(2001, 450, "Alexander"));
             medarbejdere.Add(new Mekaniker(2017, 350, "Benny", "Adress 1"));
             medarbejdere.Add(new Vaerkfoerer(2013, 5000, 2009, 400, "Casper"));
