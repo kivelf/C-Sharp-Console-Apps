@@ -10,11 +10,11 @@ namespace L03Opg2
     {
         private CprNr cpr;
         private string name;
-        private string adresse;
+        private Address adresse;
         private string medarbejdernummer;
         private const int _timerPrUge = 37;
 
-        public Medarbejder(CprNr cpr, string name, string adresse, string medarbejdernummer)
+        public Medarbejder(CprNr cpr, string name, Address adresse, string medarbejdernummer)
         {
             this.cpr = cpr;
             this.name = name;
@@ -26,7 +26,7 @@ namespace L03Opg2
         {
             this.cpr = cpr;
             this.name = name;
-            this.adresse = "default";
+            this.adresse = null;
             this.medarbejdernummer = medarbejdernummer;
         }
 
@@ -34,11 +34,11 @@ namespace L03Opg2
         {
             this.cpr = null;
             this.name = name;
-            this.adresse = "default";
+            this.adresse = null;
             this.medarbejdernummer = "not available";
         }
 
-        public Medarbejder(string name, string address)
+        public Medarbejder(string name, Address address)
         {
             this.cpr = null;
             this.name = name;
@@ -58,7 +58,7 @@ namespace L03Opg2
             set { this.name = value; }
         }
 
-        public string Adresse
+        public Address Adresse
         {
             get { return this.adresse; }
             set { this.adresse = value; }

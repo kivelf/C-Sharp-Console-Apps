@@ -9,6 +9,6 @@ namespace L03Opg2
     internal interface IharAdresse
     {
         // property declaration
-        string Adresse { get; set; }
+        Address Adresse { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace L03Opg2
             this.aarstal = aarstal;
         }
 
-        public Mekaniker(int aarstal, double timeloen, string name, string address) : base(name, address)
+        public Mekaniker(int aarstal, double timeloen, string name, Address address) : base(name, address)
         {
             this.aarstal = aarstal;
             this.timeloen = timeloen;
