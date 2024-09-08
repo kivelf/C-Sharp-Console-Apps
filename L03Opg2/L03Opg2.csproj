@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{814222A2-1DC6-449A-9389-8CAAFF6150A5}</ProjectGuid>
+    <ProjectGuid>{C5822953-5014-463F-8C25-165CDD5A9B45}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>L03Opg0</RootNamespace>
-    <AssemblyName>L03Opg0</AssemblyName>
+    <RootNamespace>L03Opg2</RootNamespace>
+    <AssemblyName>L03Opg2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
-    <Compile Include="Rectangle.cs" />
-    <Compile Include="Shape.cs" />
+    <Compile Include="CprNr.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Synsmand.cs" />
+    <Compile Include="Vaerkfoerer.cs" />
+    <Compile Include="Mekaniker.cs" />
+    <Compile Include="Medarbejder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

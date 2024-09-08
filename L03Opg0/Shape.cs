@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace L03Opg0
 {
-    public class Shape
+    public abstract class Shape
     {
         private double x, y;
 
@@ -33,5 +33,7 @@ namespace L03Opg0
             get { return y; }
             set { y = value; }
         }
+
+        public abstract double Area();
     }
 }
