@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace L03Opg2
 {
-    public class Medarbejder
+    public class Medarbejder: IharAdresse
     {
         private CprNr cpr;
         private string name;
@@ -58,7 +58,7 @@ namespace L03Opg2
             set { this.name = value; }
         }
 
-        public string Address
+        public string Adresse
         {
             get { return this.adresse; }
             set { this.adresse = value; }

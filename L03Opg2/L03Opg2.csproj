@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Firma.cs" />
     <Compile Include="CprNr.cs" />
+    <Compile Include="IharAdresse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Synsmand.cs" />
     <Compile Include="Vaerkfoerer.cs" />
