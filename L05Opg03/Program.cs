@@ -101,6 +101,15 @@ namespace L05Opg03
             }
             Console.WriteLine("------------------------------");
 
+            // opg.5.6
+            Console.WriteLine("Setting accepted to true:");
+            people1.SetAccepted(p => p.Score >= 6 && p.Age <= 40);
+            foreach (Person p in people1)
+            {
+                Console.WriteLine(p);
+            }
+            Console.WriteLine("------------------------------");
+
             Console.ReadLine();
         }
     }
