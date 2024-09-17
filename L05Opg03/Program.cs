@@ -84,6 +84,23 @@ namespace L05Opg03
             
             Console.WriteLine("------------------------------");
 
+            // opg.5.5
+            Console.WriteLine("People sorted by age (ascending)");
+            people1.Sort(new SortByAge());
+            foreach (Person p in people1)
+            {
+                Console.WriteLine(p);
+            }
+            Console.WriteLine("------------------------------");
+
+            Console.WriteLine("People sorted by score (descending)");
+            people1.Sort(new SortByScoreDesc());
+            foreach (Person p in people1)
+            {
+                Console.WriteLine(p);
+            }
+            Console.WriteLine("------------------------------");
+
             Console.ReadLine();
         }
     }
