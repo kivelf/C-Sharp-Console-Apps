@@ -53,6 +53,37 @@ namespace L05Opg03
             {
                 Console.WriteLine(p);
             }
+            Console.WriteLine("------------------------------");
+
+            // opg.5.4
+            Console.WriteLine("Index på den første person med en score på præcis 3");
+            int i = people1.FindIndex(0, people1.Count - 1, p => p.Score == 3);
+            Console.WriteLine($"index: {i}, {people1[i]}");
+            Console.WriteLine("------------------------------");
+
+            Console.WriteLine("Index på den første person under 10 år, som har en score på 3");
+            i = people1.FindIndex(0, people1.Count - 1, p => p.Score == 3 && p.Age < 10);
+            Console.WriteLine($"index: {i}, {people1[i]}");
+            Console.WriteLine("------------------------------");
+
+            Console.WriteLine("Hvor mange personer er der over 10 år som har en score på 3?");
+            int antal = (people1.FindAll(p => p.Score == 3 && p.Age > 10)).Count();
+            Console.WriteLine($"Der er {antal} personer, der opfylder kravet.");
+            Console.WriteLine("------------------------------");
+
+            Console.WriteLine("Index på den første person under 8 år, som har en score på 3");
+            i = people1.FindIndex(0, people1.Count - 1, p => p.Score == 3 && p.Age < 8);
+            if (i >= 0)
+            {
+                Console.WriteLine($"index: {i}, {people1[i]}");
+            }
+            else 
+            {
+                Console.WriteLine($"index: {i} => personen findes ikke!");
+            }
+            
+            Console.WriteLine("------------------------------");
+
             Console.ReadLine();
         }
     }
