@@ -110,6 +110,27 @@ namespace L05Opg03
             }
             Console.WriteLine("------------------------------");
 
+            // opg.5.7
+            IEnumerable<Person> personsSorted = people1.OrderBy(p => p.Age);
+            Console.WriteLine("Sorted by age using Linq:");
+            foreach (Person p in personsSorted) 
+            {
+                Console.WriteLine(p);
+            }
+
+            Console.WriteLine("\nOriginal list is still unsorted:");
+            foreach (Person p in people1)
+            {
+                Console.WriteLine(p);
+            }
+
+            personsSorted = people1.OrderByDescending(p => p.Score);
+            Console.WriteLine("Sorted by score (desc) using Linq:");
+            foreach (Person p in personsSorted)
+            {
+                Console.WriteLine(p);
+            }
+
             Console.ReadLine();
         }
     }
