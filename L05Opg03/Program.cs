@@ -146,6 +146,22 @@ namespace L05Opg03
                 Console.WriteLine(p);
             }
 
+            // opg.5.11
+            var groups =
+                from p in people1
+                let firstLetter = p.Name[0]
+                orderby firstLetter
+                group p by firstLetter;
+
+            foreach (var letterGroup in groups)
+            {
+                Console.WriteLine($"Key: {letterGroup.Key}");
+                foreach (var p in letterGroup)
+                {
+                    Console.WriteLine($"\t{p.Name}");
+                }
+            }
+
 
             Console.ReadLine();
         }
