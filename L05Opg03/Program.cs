@@ -25,7 +25,7 @@ namespace L05Opg03
 
             Console.WriteLine("Alle personer med en score under 2:");
             var people2 = people1.FindAll(p => p.Score < 2);
-            foreach (Person p in people2) 
+            foreach (Person p in people2)
             {
                 Console.WriteLine(p);
             }
@@ -77,11 +77,11 @@ namespace L05Opg03
             {
                 Console.WriteLine($"index: {i}, {people1[i]}");
             }
-            else 
+            else
             {
                 Console.WriteLine($"index: {i} => personen findes ikke!");
             }
-            
+
             Console.WriteLine("------------------------------");
 
             // opg.5.5
@@ -113,7 +113,7 @@ namespace L05Opg03
             // opg.5.7
             IEnumerable<Person> personsSorted = people1.OrderBy(p => p.Age);
             Console.WriteLine("Sorted by age using Linq:");
-            foreach (Person p in personsSorted) 
+            foreach (Person p in personsSorted)
             {
                 Console.WriteLine(p);
             }
@@ -130,6 +130,15 @@ namespace L05Opg03
             {
                 Console.WriteLine(p);
             }
+
+            Console.WriteLine("Using query expression - in ascending order:");
+            var sort = from p in people1 orderby p.Score select p;
+            foreach (Person p in sort) 
+            { 
+                Console.WriteLine(p);
+            }
+
+
 
             Console.ReadLine();
         }
