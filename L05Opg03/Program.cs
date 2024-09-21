@@ -138,6 +138,13 @@ namespace L05Opg03
                 Console.WriteLine(p);
             }
 
+            // opg.5.9
+            Console.WriteLine("\nResetting the ppl...");
+            people1.Reset();
+            foreach (Person p in people1)
+            {
+                Console.WriteLine(p);
+            }
 
 
             Console.ReadLine();

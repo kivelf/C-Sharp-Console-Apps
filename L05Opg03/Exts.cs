@@ -12,5 +12,10 @@ namespace L05Opg03
         { 
             ppl.FindAll(condition).ForEach(p => p.Accepted = true);
         }
+
+        public static void Reset(this List<Person> ppl)
+        {
+            ppl.ForEach(p => p.Accepted = false);
+        }
     }
 }
