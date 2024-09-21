@@ -162,6 +162,34 @@ namespace L05Opg03
                 }
             }
 
+            // opg.5.12
+            List<Person> people3 = new List<Person>();
+
+            try
+            {
+                people3 = Person.ReadCSVFile(@"D:\Datamatiker\4 semester\C-Sharp and Dot Net\Projects\Console Apps\L05Opg03\data2-1.csv");
+                Console.WriteLine("Data successfully loaded");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("EXCEPTION: " + ex.Message);
+                Console.WriteLine("You should probably set the filename to the Person.ReadCSVFile method to something on your disk!");
+            }
+
+            var innerJoin = people1.Join(// outer sequence 
+                      people3,  // inner sequence 
+                      p1 => p1.Name,    // outerKeySelector
+                      p3 => p3.Name,  // innerKeySelector
+                      (p1, p3) => new  // result selector
+                      {
+                          p1Name = p1.Name,
+                          p3Name = p3.Name
+                      });
+
+            foreach (var p in innerJoin) 
+            {
+                Console.WriteLine(p);
+            }
 
             Console.ReadLine();
         }
